@@ -1,0 +1,155 @@
+.londrina-solid-thin {
+    font-family: "Londrina Solid", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .londrina-solid-light {
+    font-family: "Londrina Solid", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .londrina-solid-regular {
+    font-family: "Londrina Solid", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .londrina-solid-black {
+    font-family: "Londrina Solid", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  *{
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+  }
+
+  /* used color pallette from https://www.schemecolor.com/pokemon-colors.php */
+body {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    background-image: url("https://external-preview.redd.it/aC7zQKO6GH1UVuAB_K31hwncC23H-O3C1-CJODnHB_U.png?auto=webp&s=ad1def80446bd62c4931612260ea5fb38ea1af66");
+    
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.208);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10%;
+    width: 90%;
+}
+
+h1 {
+    text-align: center;
+    color:#ff0000;
+    font-weight: large;
+    font-size:40px;
+}
+
+h2 {
+/*your pokemon, opponent  */
+text-align: center;
+font-size:30px;
+
+}
+
+h3 {
+    text-align: center;
+}
+p{
+font-size:18px;
+
+}
+.game-area {
+    display: flex;
+}
+
+.player-section, .opponent-section {
+    width: 30%;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.player-section
+{
+    background-color: #3b4cca;
+
+}
+.opponent-section {
+    background-color:#cc0000;
+}
+
+.battle-section {
+    width: 35%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pokemon-card, .move-card {
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+   
+}
+.pokemon-card
+{
+    min-height: 250px;
+}
+
+
+button {
+    padding: 5px 10px;
+    background-color: #FFDE00;
+    color: rgb(0, 0, 0);
+  
+    border-radius: 5px;
+    font-size: 18px;
+   
+
+}
+
+button:hover {
+    background-color: #B3A125;
+}
+
+button:disabled {
+    background-color: #B3A125;
+}
+
+#start-battle
+{
+    background-color: #1fca2d
+}
+#reset-game
+{
+    background-color:#cc0000;
+    
+}
+
+
+.battle-log {
+    width: 90%;
+    min-height: 200px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    margin-top: 40px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+

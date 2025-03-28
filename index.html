@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Battler</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Pixelify+Sans:wght@400..700&display=swap');
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Random Pokemon Battle Simulator</h1>
+        
+        <div class="game-area">
+            <!--player section -->
+            <div class="player-section">
+                <h2>Your Pokemon</h2>
+                <div class="pokemon-card" id="player-pokemon">
+                    <p>Roll a random Pokemon!</p>
+                    <!--  add a pokemon sprite here mauybe -->
+                </div>
+                <div class="move-card" id="player-move">
+                    <p>Roll a random move!</p>
+                </div>
+                <div class="buttons">
+                    <button id="roll-pokemon">Roll Pokemon (3 left)</button>
+                    <button id="roll-move" disabled>Roll Move (3 left)</button>
+                </div>
+            </div>
+            
+            <!-- Battle Section -->
+            <div class="battle-section">
+                <button id="start-battle" disabled>Start Battle!</button>
+                <div class="battle-log" id="battle-log">
+                    <h3>Battle log ...</h3>
+                    <!--  add messages here for the battles info -->
+                </div>
+            </div>
+            
+            <!-- Opponent seection -->
+            <div class="opponent-section">
+                <h2>Opponent</h2>
+                <div class="pokemon-card" id="opponent-pokemon">
+                    <p>Opponent's pokemon is... </p>
+                    <!-- pokemon sprite here -->
+
+                </div>
+                <div class="move-card" id="opponent-move">
+                    <p>Their move is...</p>
+                </div>
+            </div>
+        </div>
+        
+        <button id="reset-game">Reset Game</button>
+    </div>
+
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
