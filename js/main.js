@@ -1,5 +1,5 @@
 import { getRandomPokemon } from './api.js';
-
+import { displayPokemon, displayOpponentPokemon } from './pokemon.js'
 
 const playerPokemonElement = document.getElementById('player-pokemon')
 const playerMoveElement = document.getElementById('player-move')
@@ -16,9 +16,12 @@ let playerPokemon = null;
 let opponentPokemon = null;
 let playerMove = null;
 let opponentMove = null;
-let pokemonRollsLeft = 3
+let pokemonRollsLeft = 13
 let moveRollsLeft = 3
+addEventListener("DOMContentLoaded", (event) => {
+getRandomOpponentPokemon();
 
+});
 rollPokemonButton.addEventListener('click', rollPlayerPokemon);
 
 async function rollPlayerPokemon() {
@@ -27,9 +30,7 @@ async function rollPlayerPokemon() {
         const pokemon = await getRandomPokemon();
         playerPokemon = pokemon;
         
-        playerPokemonElement.innerHTML = `
-      <h2>${pokemon.name.toUpperCase()}</h2>
-        <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}">`;
+        displayPokemon(playerPokemonElement, pokemon);
         
         pokemonRollsLeft--;
         rollPokemonButton.textContent = `Roll Pokemon (${pokemonRollsLeft} left)`;
@@ -41,6 +42,21 @@ async function rollPlayerPokemon() {
         
     } catch (error) {
         console.error('Error rolling Pokemon:', error);
-        playerPokemonElement.innerHTML = '<p>Error fetching Pokemon. Try again.</p>';
+        playerPokemonElement.innerHTML = '<p>Error fetching Pokemon.</p>';
+    }
+}
+
+async function getRandomOpponentPokemon() {
+    try {
+    
+        const pokemon = await getRandomPokemon();
+        opponentPokemon = pokemon;
+        
+        displayPokemon(opponentPokemonElement, pokemon);
+        
+        
+    } catch (error) {
+        console.error('Error rolling Pokemon:', error);
+        opponentPokemonElement.innerHTML = '<p>Error fetching Opponent Pokemon.</p>';
     }
 }
