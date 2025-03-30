@@ -39,14 +39,17 @@ body {
     background-color: rgba(255, 255, 255, 0.208);
     padding: 10px;
     border-radius: 5px;
+
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     margin-top: 10%;
-    width: 90%;
+
+    width: 90%
 }
 
 h1 {
     text-align: center;
     color:#ff0000;
+
     font-weight: large;
     font-size:40px;
 }
@@ -133,6 +136,13 @@ button:disabled {
 {
     background-color:#cc0000;
     
+}
+#start-battle:disabled {
+    background-color: #095c10;
+}
+/* I DID NOT KNOW THIS WAS  A THING LOL . Was getting an issue where if you hover button while disabled it still shows hover color  */
+#start-battle:hover:not(:disabled) {
+    background-color: #32bd3e;
 }
 
 
