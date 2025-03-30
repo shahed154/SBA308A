@@ -37,10 +37,11 @@ async function rollPlayerPokemon() {
         playerPokemon = pokemon;
         
         displayPokemon(playerPokemonElement, pokemon);
-        
+      
         pokemonRollsLeft--;
         rollPokemonButton.textContent = `Roll Pokemon (${pokemonRollsLeft} left)`;
-        
+        moveRollsLeft = 3
+        rollPlayerMove();
         if (pokemonRollsLeft == 0) {
             window.alert("Out of Rolls!! "); // i cant see this for some reason
             rollPokemonButton.disabled = true;
