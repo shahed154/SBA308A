@@ -34,6 +34,7 @@ function battle(playerPokemon, playerMove, opponentPokemon, opponentMove)
 
 }
 
+
 function displayBattleResults(battleLogElement, battleResults) {
 
     battleLogElement.innerHTML = '<h3>Battle Results</h3>';

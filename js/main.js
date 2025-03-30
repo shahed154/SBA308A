@@ -17,7 +17,7 @@ let playerPokemon = null;
 let opponentPokemon = null;
 let playerMove = null;
 let opponentMove = null;
-let pokemonRollsLeft = 13
+let pokemonRollsLeft = 3
 let moveRollsLeft = 3
 
 addEventListener("DOMContentLoaded", (event) => 
@@ -128,11 +128,11 @@ async function startBattle()
 {
     
     if (!opponentMove) {
-        await getRandomOpponentMove();
+        await getRandomOpponentMove()
     }
  
     if (!playerPokemon || !playerMove || !opponentPokemon || !opponentMove) {
-        alert('Make sure you have a Pokémon and a move selected first!');
+        alert('Make sure you have a Pokemon and a move selected first!');
         return;
     }
 
@@ -156,10 +156,10 @@ function resetGame() {
     opponentPokemon = null;
     playerMove = null;
     opponentMove = null;
-    pokemonRollsLeft = 3;
-    moveRollsLeft = 3;
+    pokemonRollsLeft = 3
+    moveRollsLeft = 3
     
-    playerPokemonElement.innerHTML = '<p>Roll a random Pokemon!</p>';
+    playerPokemonElement.innerHTML = '<p>Roll a random Pokemon!</p>'
     playerMoveElement.innerHTML = '<p>Roll a random move!</p>';
     
     rollPokemonButton.disabled = false;
