@@ -13,7 +13,8 @@ Player can roll a random Pokemon and moves, then battle against a computer oppon
 - View the battle results in the battle log
 - Click [Reset Game] to start over
 
-- Programming principals used:
+
+# Programming principals used:
 - HTML, CSS, JavaScript
 - Axios for API requests
 - Javascript Modules
