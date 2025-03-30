@@ -37,6 +37,10 @@ function battle(playerPokemon, playerMove, opponentPokemon, opponentMove)
 
 function displayBattleResults(battleLogElement, battleResults) {
 
+    document.getElementById('roll-pokemon').disabled = true;
+    document.getElementById('roll-move').disabled = true;
+    document.getElementById('reset-game').disabled = true;
+    
     battleLogElement.innerHTML = '<h3>Battle Results</h3>';
     
     battleResults.battleLog.forEach((entry, index) => {
@@ -52,7 +56,7 @@ function displayBattleResults(battleLogElement, battleResults) {
             battleLogElement.appendChild(logEntry);
             
            
-  
+            
 
         }, index * 2500); 
 
